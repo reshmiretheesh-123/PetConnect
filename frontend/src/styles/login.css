@@ -1,0 +1,127 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #e8f8f5, #f0faf6);
+  font-family: "Poppins", sans-serif;
+}
+
+.login-container {
+  background-color: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 360px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.login-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.login-header .paw-icon {
+  font-size: 2.8rem;
+  color: #52b788;
+  margin-bottom: 0.5rem;
+}
+
+.login-header h2 {
+  font-size: 1.6rem;
+  color: #2b6777;
+}
+
+.login-header span {
+  color: #52b788;
+}
+
+.login-header p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.3rem;
+  margin-bottom: 1.8rem;
+}
+
+/* --- Input box section --- */
+.input-group {
+  position: relative;
+  margin-bottom: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-group input {
+  width: 85%;
+  padding: 0.8rem 2.5rem 0.8rem 2.5rem;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.input-group input:focus {
+  border-color: #52b788;
+  box-shadow: 0 0 6px rgba(82, 183, 136, 0.4);
+}
+
+.input-icon {
+  position: absolute;
+  left: 40px;
+  color: #2b6777;
+  font-size: 1rem;
+}
+
+/* --- Button --- */
+.login-btn {
+  background-color: #52b788;
+  border: none;
+  color: white;
+  padding: 0.8rem 0;
+  width: 85%;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #2b6777;
+}
+
+/* --- Register link --- */
+.register-link {
+  margin-top: 1.3rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.register-link a {
+  color: #2b6777;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-container {
+    width: 90%;
+    padding: 2rem 1.2rem;
+  }
+
+  .input-group input {
+    width: 90%;
+  }
+
+  .input-icon {
+    left: 25px;
+  }
+}
