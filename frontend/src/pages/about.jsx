@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/about.css";
-import { FaPaw, FaHeart, FaUsers, FaHandsHelping } from "react-icons/fa";
+import { FaPaw, FaHeart, FaUsers } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -22,7 +23,7 @@ function About() {
         <div className="about-image">
           <img
             src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=539,h=381,fit=crop/Yan1lOReMPhOZXjl/jumbotron-YBg4w7jp9QcGLleP.jpg"
-            alt=""
+            alt="Who we are"
           />
         </div>
         <div className="about-content">
@@ -48,7 +49,7 @@ function About() {
         <div className="about-image">
           <img
             src="https://articles.hepper.com/wp-content/uploads/2023/05/labrador-retriever-dog-pawing-to-his-owner_New-Africa-Shutterstock.jpg"
-            alt=""
+            alt="Our mission"
           />
         </div>
       </div>
@@ -58,7 +59,7 @@ function About() {
         <div className="about-image">
           <img
             src="https://weton.biz.id/wp-content/uploads/2025/08/Contact-Us.webp"
-            alt=""
+            alt="Our vision"
           />
         </div>
         <div className="about-content">
@@ -70,25 +71,6 @@ function About() {
           </p>
         </div>
       </div>
-
-      {/* ============ VALUES SECTION ============
-      <div className="values-section">
-        <h2><FaHandsHelping className="icon" /> Our Values</h2>
-        <div className="values-container">
-          <div className="value-card">
-            <h3>Compassion</h3>
-            <p>We care deeply for every animal, promoting empathy and kindness.</p>
-          </div>
-          <div className="value-card">
-            <h3>Community</h3>
-            <p>We believe in collaboration — bringing people and pets together.</p>
-          </div>
-          <div className="value-card">
-            <h3>Trust</h3>
-            <p>We maintain transparency and security in every adoption process.</p>
-          </div>
-        </div>
-      </div> */}
 
       {/* ============ MEET OUR TEAM SECTION ============ */}
       <div className="team-section">
@@ -115,6 +97,11 @@ function About() {
             <p>AI Integration Specialist</p>
           </div>
         </div>
+      </div>
+
+      {/* ============ BACK TO HOME BUTTON ============ */}
+      <div className="back-home-container">
+        <Link to="/" className="btn-back-home">← Back to Home</Link>
       </div>
     </section>
   );

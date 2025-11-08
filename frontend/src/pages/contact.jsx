@@ -1,14 +1,20 @@
 import React from "react";
 import "../styles/contact.css";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Contact() {
   return (
     <section className="contact-page">
       {/* Header Section */}
       <div className="contact-header">
-        <h1>Contact <span>PetConnect</span></h1>
-        <p>We’d love to hear from you! Reach out to us with any questions, suggestions, or support needs.</p>
+        <h1>
+          Contact <span>PetConnect</span>
+        </h1>
+        <p>
+          We’d love to hear from you! Reach out to us with any questions,
+          suggestions, or support needs.
+        </p>
       </div>
 
       {/* Contact Details Section */}
@@ -16,21 +22,32 @@ function Contact() {
         <div className="contact-info">
           <div className="info-box">
             <FaEnvelope className="icon" />
-            <h3>Email</h3>
-            <p>support@petconnect.com</p>
+            <div className="info-text">
+              <h3>Email</h3>
+              <p>support@petconnect.com</p>
+            </div>
           </div>
 
           <div className="info-box">
             <FaPhoneAlt className="icon" />
-            <h3>Phone</h3>
-            <p>+91 98765 43210</p>
+            <div className="info-text">
+              <h3>Phone</h3>
+              <p>+91 98765 43210</p>
+            </div>
           </div>
 
           <div className="info-box">
             <FaMapMarkerAlt className="icon" />
-            <h3>Location</h3>
-            <p>Cardif,UK,London</p>
+            <div className="info-text">
+              <h3>Location</h3>
+              <p>Cardiff, UK, London</p>
+            </div>
           </div>
+
+          {/* Back to Home Button */}
+          <Link to="/" className="btn-back-home">
+            ← Back to Home
+          </Link>
         </div>
 
         {/* Google Map Embed */}

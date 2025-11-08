@@ -1,0 +1,60 @@
+.petowner-form {
+    /* width: 400px; */
+    background: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin: 30px 500px;
+}
+
+.petowner-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.petowner-form label {
+    font-weight: bold;
+}
+
+.petowner-form input {
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.petowner-form button {
+    background-color: #f77f00;
+    color: white;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.btn-submit:hover {
+    background-color: #e56b00;
+}
+
+.petowner-form a {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #e56b00;
+    text-decoration: none;
+}
+
+.petowner-form a:hover{
+    color: #e56b00;
+    text-decoration: underline;
+}
+
+#error{
+    color: red;
+}
