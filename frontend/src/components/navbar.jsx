@@ -1,46 +1,46 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "../styles/navbar.css";
+import { Link } from 'react-router';
+import '../styles/navbar.css';
 
 function Navbar() {
-  const [loginOpen, setLoginOpen] = useState(false);
-
   return (
     <nav className="navbar">
-      <div className="nav-container">
-        <div className="logo">🐾 PetConnect</div>
+      <div className="container">
+        <h2 className="navbar-brand" id="logo">🐾 PetConnect</h2>
 
-        <ul className="nav-links">
-          <li>
-            <Link to="/" className="nav-item">Home</Link>
-          </li>
-          <li>
-            <Link to="/about" className="nav-item">About</Link>
-          </li>
-          <li>
-            <Link to="/contact" className="nav-item">Contact</Link>
+        <ul className="item">
+          <li className="nav-item">
+            <Link to="/" className="nav-link">Home</Link>
           </li>
 
-          {/* Register Button */}
-          <li>
-            <Link to="/register" className="btn-register">Register</Link>
+          <li className="nav-item">
+            <Link to="/about" className="nav-link">About</Link>
+          </li>
+
+          <li className="nav-item">
+            <Link to="/contact" className="nav-link">Contact</Link>
           </li>
 
           {/* Login Dropdown */}
-          <li
-            className="dropdown"
-            onMouseEnter={() => setLoginOpen(true)}
-            onMouseLeave={() => setLoginOpen(false)}
-          >
-            <button className="btn-login">Login ▾</button>
-            {loginOpen && (
-              <ul className="dropdown-menu">
-                <li><Link to="/login/petowner">Pet Owner</Link></li>
-                <li><Link to="/login/adopter">Adopter</Link></li>
-                <li><Link to="/login/foster">Foster</Link></li>
-                <li><Link to="/login/rescue">Rescue/Shelter</Link></li>
-              </ul>
-            )}
+          <li className="nav-item dropdown">
+            <Link 
+              to="" 
+              className="nav-link dropdown-toggle" 
+              role="button" 
+              data-bs-toggle="dropdown" 
+              aria-expanded="false"
+            >
+              Login
+            </Link>
+            <ul className="dropdown-menu">
+              <li><Link to="/login" className="dropdown-item">Pet Owner</Link></li>
+              <li><Link to="/adopterlogin" className="dropdown-item">Adopter</Link></li>
+              <li><Link to="/fosterlogin" className="dropdown-item">Foster</Link></li>
+              <li><Link to="/rescuelogin" className="dropdown-item">Rescue/Shelter</Link></li>
+              <li><Link to="/adminlogin" className="dropdown-item">Admin</Link></li>
+            </ul>
+          </li>
+          <li className="nav-item">
+            <Link to="/register" className="nav-link">Register</Link>
           </li>
         </ul>
       </div>

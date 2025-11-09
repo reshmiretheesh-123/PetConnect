@@ -10,6 +10,7 @@ require("./db.js")
 // app.use("/uploads", express.static("uploads/"))
 const petownerController=require("./controllers/petownercontroller.js")
 app.use("/petowner",petownerController)
+
 app.listen(8080, () => {
     console.log("Server is running on port 8080")
 })

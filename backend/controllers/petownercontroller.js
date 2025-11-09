@@ -13,7 +13,7 @@ router.post("/register",upload.fields([{name:"adhaar",maxCount:1},{name:"image",
         username,
         address,
         contact,
-        password,
+        password:hashPassword,
         adhaar: req.files?.adhaar && req.files.adhaar[0].filename,
         image: req.files?.image && req.files.image[0].filename
     })
@@ -21,6 +21,30 @@ router.post("/register",upload.fields([{name:"adhaar",maxCount:1},{name:"image",
     res.send({
         message: "Petowner registered successfully", newPetowner
     })
+})
+
+router.post("/login",async (req,res) => {
+    const { username, password } =req.body
+    const petowner = await Petowner.findOne({ username })
+    if (!petowner){
+        res.status(400).send({
+            message:  "Invalid username or password"
+        })
+    }
+    else {
+        const iscorrectPassword = bcrypt.compareSync(password,petowner.password)
+        if (iscorrectPassword){
+            const token = jwt.sign({ id: petowner._id }, process.env.JWT_TOKEN)
+            res.send({
+                message: "PetOwner registered successfully", petowner, token
+            })
+        }
+        else {
+            res.status(400).send({
+                message: "Incorrect Password"
+            })
+        }
+    }
 })
 
 module.exports=router
