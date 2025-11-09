@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "../styles/login.css";
 import instance from "../utils/apiClient";
+import { useNavigate } from "react-router-dom";
 import { FaUser, FaLock, FaPaw } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AxiosError } from "axios";
 
 function Login() {
+  const Navigate=useNavigate()
   const [formData, setFormData] = useState({ username: "", password: "" });
 
   const handleChange = (e) => {
@@ -18,9 +20,10 @@ function Login() {
     // You can add login logic or API call here
     try {
       let response = await instance.post("/petowner/login", formData)
-      const token = response.formData.token
+      const token = response.data.token
       localStorage.setItem("TOKEN", token)
       alert("Login Successfully")
+      Navigate("/petownerhomepage")
     }
     catch (e) {
       if (e instanceof AxiosError) {
@@ -69,7 +72,7 @@ return (
             type="password"
             name="password"
             placeholder="Password"
-            value={formData.password}
+            value={formData.password} 
             onChange={handleChange}
             required
           />

@@ -47,4 +47,36 @@ router.post("/login",async (req,res) => {
     }
 })
 
+// router.post("/login", async (req, res) => {
+//   try {
+//     const { username, password } = req.body;
+
+//     const petowner = await Petowner.findOne({ username });
+//     if (!petowner) {
+//       return res.status(400).send({ message: "Invalid username or password" });
+//     }
+
+//     const iscorrectPassword = bcrypt.compareSync(password, petowner.password);
+//     if (!iscorrectPassword) {
+//       return res.status(400).send({ message: "Incorrect Password" });
+//     }
+
+//     if (!process.env.JWT_TOKEN) {
+//       console.error("JWT_TOKEN not found in environment variables!");
+//       return res.status(500).send({ message: "Server configuration error" });
+//     }
+
+//     const token = jwt.sign({ id: petowner._id }, process.env.JWT_TOKEN);
+//     res.send({
+//       message: "Login successful",
+//       petowner,
+//       token,
+//     });
+//   } catch (err) {
+//     console.error("Login error:", err);
+//     res.status(500).send({ message: "Internal server error", error: err.message });
+//   }
+// });
+
+
 module.exports=router

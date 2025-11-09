@@ -7,7 +7,7 @@ app.use(express.json())
 app.use(cors())
 require("./db.js")
 
-// app.use("/uploads", express.static("uploads/"))
+app.use("/uploads", express.static("uploads/"))
 const petownerController=require("./controllers/petownercontroller.js")
 app.use("/petowner",petownerController)
 
