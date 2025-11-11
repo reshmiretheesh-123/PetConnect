@@ -3,13 +3,13 @@ const router = express.Router()
 const upload = require("../services/imageservices")
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
-const Petowner = require("../models/petownerschema")
+const Adopter = require("../models/adopterschema")
 
 router.post("/register",upload.fields([{name:"adhaar",maxCount:1},{name:"image",maxCount:1}]), async (req, res) => {
-    const { name, username, address, contact, password } = req.body
+    const { adoptername, username, address, contact, password } = req.body
     const hashPassword = bcrypt.hashSync(password, 10)
-    const newPetowner = new Petowner({
-        name,
+    const newAdopter = new Adopter({
+        adoptername,
         username,
         address,
         contact,
@@ -17,26 +17,26 @@ router.post("/register",upload.fields([{name:"adhaar",maxCount:1},{name:"image",
         adhaar: req.files?.adhaar && req.files.adhaar[0].filename,
         image: req.files?.image && req.files.image[0].filename
     })
-    await newPetowner.save() 
+    await newAdopter.save() 
     res.send({
-        message: "Petowner registered successfully", newPetowner
+        message: "Adopter registered successfully", newAdopter
     })
 })
 
 router.post("/login",async (req,res) => {
     const { username, password } =req.body
-    const petowner = await Petowner.findOne({ username })
-    if (!petowner){
+    const adopter = await Adopter.findOne({ username })
+    if (!adopter){
         res.status(400).send({
             message:  "Invalid username or password"
         })
     }
     else {
-        const iscorrectPassword = bcrypt.compareSync(password,petowner.password)
+        const iscorrectPassword = bcrypt.compareSync(password,adopter.password)
         if (iscorrectPassword){
-            const token = jwt.sign({ id: petowner._id }, process.env.JWT_TOKEN)
+            const token = jwt.sign({ id: adopter._id }, process.env.JWT_TOKEN)
             res.send({
-                message: "PetOwner registered successfully", petowner, token
+                message: "Adopter Logined successfully", adopter, token
             })
         }
         else {
@@ -46,8 +46,4 @@ router.post("/login",async (req,res) => {
         }
     }
 })
-
-
-
-
 module.exports=router

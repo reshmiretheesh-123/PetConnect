@@ -1,0 +1,136 @@
+/* Background styling */
+.adopterregister-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://images.unsplash.com/photo-1601758123927-196efdf4b62a") no-repeat center center/cover;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Form container */
+.adopter-form {
+  background: rgba(255, 255, 255, 0.95);
+  width: 400px;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+/* Heading */
+.adopter-form h2 {
+  text-align: center;
+  color: #2d3748;
+  font-size: 26px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* Labels */
+.adopter-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Input fields */
+.adopter-form input[type="text"],
+.adopter-form input[type="email"],
+.adopter-form input[type="tel"],
+.adopter-form input[type="password"],
+.adopter-form input[type="file"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s ease;
+  font-size: 14px;
+  margin-bottom: 10px;
+  background-color: #fafafa;
+}
+
+.adopter-form input:focus {
+  border-color: #00bfa6;
+  box-shadow: 0 0 5px rgba(0, 191, 166, 0.5);
+}
+
+/* Error messages */
+.text-danger {
+  color: #e63946;
+  font-size: 13px;
+  margin: -5px 0 10px 0;
+}
+
+/* Button styling */
+.adopter-form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #00bfa6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.adopter-form button:hover {
+  background-color: #009e8d;
+  transform: scale(1.03);
+}
+
+/* Remove underline from button link */
+.adopter-form button a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Paragraph links */
+.adopter-form p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.adopter-form p a {
+  color: #00bfa6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.adopter-form p a:hover {
+  text-decoration: underline;
+}
+
+/* Home link */
+.home-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.home-link:hover {
+  color: #00bfa6;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .adopter-form {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .adopter-form h2 {
+    font-size: 22px;
+  }
+}

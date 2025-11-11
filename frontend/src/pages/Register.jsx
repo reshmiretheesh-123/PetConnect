@@ -16,7 +16,7 @@ function Register() {
           <p>List your pets for adoption and connect with caring adopters.</p>
         </Link>
 
-        <Link to="/register/adopter" className="register-card">
+        <Link to="/register/adopterregister" className="register-card">
           <h3>Register as Adopter</h3>
           <p>Find your perfect pet companion and give them a loving home.</p>
         </Link>
