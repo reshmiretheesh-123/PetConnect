@@ -74,3 +74,22 @@
   background: #ff7043;
   color: #fff;
 }
+
+/* Ensure navbar stays visible above the register section */
+nav {
+  position: relative;
+  z-index: 10;
+}
+
+/* Optional: If your navbar text is white or blending in, make it darker */
+nav a {
+  color: #333 !important;
+  font-weight: 600;
+}
+
+/* If the navbar background is transparent, give it a soft shadow */
+nav {
+  background: #361c1ccc; /* slightly transparent white */
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}

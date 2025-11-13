@@ -2,11 +2,11 @@
 
 .navbar {
   background: linear-gradient(90deg, #ff9966, #ff5e62);
-  color: #fff;
+  color: #e31e1e;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px rgba(20, 234, 99, 0.15);
   font-family: 'Poppins', sans-serif;
 }
 
@@ -52,7 +52,7 @@
 
 .nav-link:hover {
   background: rgba(255, 255, 255, 0.2);
-  color: #fff;
+  color: #3b1fc5;
 }
 
 /* Dropdown */
@@ -60,7 +60,7 @@
   position: absolute;
   top: 120%;
   left: 0;
-  background: #fff;
+  background: #673131;
   border-radius: 8px;
   min-width: 170px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);

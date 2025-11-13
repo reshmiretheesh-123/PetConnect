@@ -26,7 +26,7 @@ function Register() {
           <p>Provide temporary care and love to pets waiting for adoption.</p>
         </Link>
 
-        <Link to="/register/rescue" className="register-card">
+        <Link to="/register/rescueshelter" className="register-card">
           <h3>Register as Rescue/Shelter</h3>
           <p>Manage adoptions and connect with pet lovers in your community.</p>
         </Link>

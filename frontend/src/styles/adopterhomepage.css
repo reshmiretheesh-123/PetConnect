@@ -1,0 +1,88 @@
+.adopter-homepage {
+  background-color: #f9f9fb;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  color: #ff6600;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  color: #ff6600;
+}
+
+.logout-btn {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #e05500;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h5 {
+  color: #888;
+  letter-spacing: 1px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  color: #333;
+  margin: 15px 0;
+}
+
+.hero-text h1 span {
+  color: #ff6600;
+}
+
+.hero-text p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.hero-image img {
+  width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}

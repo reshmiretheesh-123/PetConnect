@@ -1,0 +1,106 @@
+.rescueshelterlogin-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffaf5;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.rescueshelterlogin-form {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  text-align: left;
+}
+
+.rescueshelterlogin-form h2 {
+  text-align: center;
+  color: #ff7043;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+.rescueshelterlogin-form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #333;
+}
+
+.rescueshelterlogin-form input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rescueshelterlogin-form input:focus {
+  border-color: #ff7043;
+  box-shadow: 0 0 6px rgba(255, 112, 67, 0.3);
+}
+
+.text-danger {
+  color: red;
+  font-size: 0.85rem;
+  margin: 4px 0 0 2px;
+}
+
+.rescueshelterlogin-form button {
+  width: 100%;
+  background-color: #ff7043;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rescueshelterlogin-form button:hover {
+  background-color: #e25d34;
+}
+
+.rescueshelterlogin-form p {
+  text-align: center;
+  margin-top: 15px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.rescueshelterlogin-form p a {
+  color: #ff7043;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.rescueshelterlogin-form p a:hover {
+  text-decoration: underline;
+}
+
+.home-link {
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+  color: #ff7043;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.home-link:hover {
+  color: #fff;
+  background-color: #ff7043;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
