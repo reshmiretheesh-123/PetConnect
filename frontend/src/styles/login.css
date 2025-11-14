@@ -1,127 +1,149 @@
+/* ------------------------------
+   PAGE BACKGROUND
+--------------------------------*/
 .login-page {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #e8f8f5, #f0faf6);
+  background: linear-gradient(135deg, #fceed1, #ffe8cc);
   font-family: "Poppins", sans-serif;
+  padding: 20px;
 }
 
+/* ------------------------------
+   LOGIN CARD
+--------------------------------*/
 .login-container {
-  background-color: #fff;
-  padding: 2.5rem 2rem;
+  width: 380px;
+  background: #ffffffcc;
+  padding: 35px 30px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  width: 360px;
+  backdrop-filter: blur(7px);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.7s ease-in-out;
   text-align: center;
-  transition: all 0.3s ease;
 }
 
-.login-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
+/* ------------------------------
+   HEADER
+--------------------------------*/
 .login-header .paw-icon {
-  font-size: 2.8rem;
-  color: #52b788;
-  margin-bottom: 0.5rem;
+  font-size: 40px;
+  color: #ff7a18;
+  margin-bottom: 8px;
 }
 
 .login-header h2 {
-  font-size: 1.6rem;
-  color: #10b41d;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
 }
 
-.login-header span {
-  color: #52b788;
+.login-header h2 span {
+  color: #ff7a18;
 }
 
 .login-header p {
   font-size: 0.9rem;
-  color: #555;
-  margin-top: 0.3rem;
-  margin-bottom: 1.8rem;
+  color: #666;
+  margin-top: 5px;
 }
 
-/* --- Input box section --- */
+/* ------------------------------
+   INPUT GROUP
+--------------------------------*/
 .input-group {
   position: relative;
-  margin-bottom: 1.4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.input-group input {
-  width: 85%;
-  padding: 0.8rem 2.5rem 0.8rem 2.5rem;
-  border: 1px solid #ccc;
-  border-radius: 30px;
-  outline: none;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.input-group input:focus {
-  border-color: #52b788;
-  box-shadow: 0 0 6px rgba(82, 183, 136, 0.4);
+  margin: 18px 0;
 }
 
 .input-icon {
   position: absolute;
-  left: 40px;
-  color: #2b6777;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
   font-size: 1rem;
+  color: #ff7a18;
 }
 
-/* --- Button --- */
+.input-group input {
+  width: 100%;
+  padding: 12px 40px;
+  border-radius: 25px;
+  border: 1.7px solid #ffcba7;
+  background: #fff;
+  outline: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #ff7a18;
+  box-shadow: 0px 0px 8px rgba(255, 122, 24, 0.4);
+}
+
+/* ------------------------------
+   LOGIN BUTTON
+--------------------------------*/
 .login-btn {
-  background-color: #52b788;
-  border: none;
+  width: 100%;
+  padding: 12px;
+  background: #ff7a18;
   color: white;
-  padding: 0.8rem 0;
-  width: 85%;
-  border-radius: 30px;
+  border: none;
+  border-radius: 25px;
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s;
+  margin-top: 10px;
+  transition: 0.3s;
 }
 
 .login-btn:hover {
-  background-color: #0bc650;
+  background: #ff8f3d;
+  transform: translateY(-2px);
 }
 
-/* --- Register link --- */
+/* ------------------------------
+   REGISTER LINK
+--------------------------------*/
 .register-link {
-  margin-top: 1.3rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #555;
+  margin-top: 15px;
 }
 
 .register-link a {
-  color: #078621;
-  font-weight: 600;
+  color: #ff7a18;
   text-decoration: none;
+  font-weight: 600;
 }
 
 .register-link a:hover {
   text-decoration: underline;
 }
 
-/* Responsive */
-@media (max-width: 480px) {
+/* ------------------------------
+   ANIMATION
+--------------------------------*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------------------
+   MOBILE RESPONSIVE
+--------------------------------*/
+@media (max-width: 450px) {
   .login-container {
     width: 90%;
-    padding: 2rem 1.2rem;
-  }
-
-  .input-group input {
-    width: 90%;
-  }
-
-  .input-icon {
-    left: 25px;
+    padding: 28px 20px;
   }
 }

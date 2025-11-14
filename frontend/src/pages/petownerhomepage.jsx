@@ -27,7 +27,7 @@ function PetOwnerHomepage() {
           <li onClick={() => navigate("/managepets")}>Manage Pets</li>
           <li onClick={() => navigate("/findpet")}>Find Pet</li>
           <li onClick={() => navigate("/lostfoundreports")}>Lost/Found Reports</li>
-          <li onClick={() => navigate("/profile")}>Profile</li>
+          <li onClick={() => navigate("/petownerprofile")}>Profile</li>
         </ul>
 
         <button className="logout-btn" onClick={handleLogout}>

@@ -47,6 +47,13 @@ router.post("/login",async (req,res) => {
     }
 })
 
+router.get("/profile", async (req, res) => {
+    const token = req.headers.authorization.slice(7)
+    const decoded = jwt.verify(token, process.env.JWT_TOKEN)
+    const petowner = await Petowner.findOne({ "_id": decoded.id })
+    res.send({ message: "Petowner Profile", petowner })
+})
+
 
 
 

@@ -21,6 +21,8 @@ import FosterRegister from './pages/fosterregister'
 import FosterLogin from './pages/fosterlogin'
 import FosterHomePage from './pages/fosterhomepage'
 import AdminLogin from './pages/adminlogin'
+import AdminHomePage from './pages/adminhomepage'
+import PetOwnerProfile from './pages/petownerprofile'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -45,6 +47,8 @@ function App() {
         <Route path="/fosterlogin" element={<FosterLogin/>} />
         <Route path="/fosterhomepage" element={<FosterHomePage/>}/>
         <Route path="/adminlogin" element={<AdminLogin/>} />
+        <Route path="/adminhomepage" element={<AdminHomePage/>}/>
+        <Route path="/petownerprofile" element={<PetOwnerProfile/>}/>
         </Routes>
     </>
   )

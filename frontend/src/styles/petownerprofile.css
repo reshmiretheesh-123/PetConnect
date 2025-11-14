@@ -1,0 +1,71 @@
+.petowner-profile-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.profile-card {
+  width: 420px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.profile-header {
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 5px solid #ff8e42;
+  object-fit: cover;
+}
+
+.profile-name {
+  margin-top: 12px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile-role {
+  font-size: 18px;
+  color: #ff8e42;
+  font-weight: 500;
+}
+
+.profile-details {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.detail-item {
+  background: #ffeddc;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.update-btn {
+  background: #ff8e42;
+  color: white;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.update-btn a {
+  color: white;
+  text-decoration: none;
+}
