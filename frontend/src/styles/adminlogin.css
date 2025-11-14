@@ -1,0 +1,88 @@
+.admin-login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  /* ✅ Background image */
+  background-image: url("https://www.shutterstock.com/image-photo/vet-examining-dog-cat-puppy-600nw-1828050692.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  font-family: Arial, sans-serif;
+}
+
+/* Form styling */
+.admin-login-form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(216, 24, 24, 0.3);
+  width: 320px;
+  text-align: center;
+}
+
+.admin-login-form h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.admin-login-form label {
+  display: block;
+  margin-top: 10px;
+  text-align: left;
+  color: #555;
+  font-weight: bold;
+}
+
+.admin-login-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.login-btn {
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #2ac120;
+}
+
+/* ✅ Back button style */
+.back-btn {
+  background-color: #f04e4e;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #c03c3c;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 4px;
+}

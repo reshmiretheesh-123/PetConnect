@@ -1,6 +1,6 @@
 .petowner-form {
-    /* width: 400px; */
-    background: white;
+    width: 350px;
+    background: rgb(198, 181, 181);
     padding: 20px 30px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -20,8 +20,8 @@
 }
 
 .petowner-form input {
-    padding: 5px;
-    margin-top: 5px;
+    padding: 3px;
+    margin-top: 3px;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 16px;
@@ -39,7 +39,7 @@
 }
 
 .btn-submit:hover {
-    background-color: #e56b00;
+    background-color: #28a2ca;
 }
 
 .petowner-form a {

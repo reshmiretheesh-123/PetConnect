@@ -1,34 +1,30 @@
+/* Rescue Shelter Register Page */
+
 .rescueshelterregister-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #a36433; /* soft warm background */
   min-height: 100vh;
-  padding: 30px;
+  background: linear-gradient(135deg, #fff7f0, #fff0e6);
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
 }
 
 .rescueshelter-form {
   background: #fff;
-  padding: 40px 50px;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 480px;
+  padding: 36px 44px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  width: 420px;
+  max-width: 100%;
   text-align: left;
-  transition: all 0.3s ease;
-}
-
-.rescueshelter-form:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .rescueshelter-form h2 {
-  text-align: center;
+  margin: 0 0 18px 0;
   color: #ff7043;
-  margin-bottom: 25px;
-  font-size: 1.8rem;
-  letter-spacing: 0.5px;
+  font-size: 22px;
+  text-align: center;
 }
 
 .rescueshelter-form label {
@@ -36,59 +32,57 @@
   margin-top: 12px;
   font-weight: 600;
   color: #333;
-  font-size: 0.95rem;
+  font-size: 14px;
 }
 
-.rescueshelter-form input {
+.rescueshelter-form input[type="text"],
+.rescueshelter-form input[type="email"],
+.rescueshelter-form input[type="tel"],
+.rescueshelter-form input[type="password"],
+.rescueshelter-form input[type="file"] {
   width: 100%;
-  padding: 10px 14px;
-  margin-top: 5px;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 0.95rem;
-  outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 14px;
+  box-sizing: border-box;
 }
 
 .rescueshelter-form input:focus {
-  border-color: #ff7043;
-  box-shadow: 0 0 6px rgba(255, 112, 67, 0.3);
+  outline: none;
+  border-color: #ff914d;
+  box-shadow: 0 0 6px rgba(255, 145, 77, 0.15);
 }
 
 .text-danger {
-  color: red;
-  font-size: 0.85rem;
-  margin: 4px 0 0 2px;
+  color: #d32f2f;
+  font-size: 13px;
+  margin-top: 6px;
 }
 
 .rescueshelter-form button {
   width: 100%;
+  padding: 11px 14px;
+  margin-top: 18px;
+  border: none;
+  border-radius: 10px;
   background-color: #ff7043;
   color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: 600;
-  margin-top: 20px;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
+  font-size: 15px;
 }
 
 .rescueshelter-form button:hover {
-  background-color: #e25d34;
-}
-
-.rescueshelter-form button a {
-  text-decoration: none;
-  color: #fff;
+  background-color: #ff5a28;
 }
 
 .rescueshelter-form p {
-  text-align: center;
-  margin-top: 15px;
+  margin-top: 12px;
+  font-size: 14px;
   color: #555;
-  font-size: 0.95rem;
+  text-align: center;
 }
 
 .rescueshelter-form p a {
@@ -103,17 +97,8 @@
 
 .home-link {
   display: block;
+  margin-top: 8px;
   text-align: center;
-  margin-top: 25px;
-  color: #ff7043;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.home-link:hover {
-  color: #700f0f;
-  background-color: #ff7043;
-  padding: 8px 16px;
-  border-radius: 20px;
+  color: #666;
+  font-size: 13px;
 }

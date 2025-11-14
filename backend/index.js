@@ -14,6 +14,8 @@ const adopterController=require("./controllers/adoptercontrollers.js")
 app.use("/adopter",adopterController)
 const rescueshelterController=require("./controllers/rescuesheltercontrollers.js")
 app.use("/rescueshelter",rescueshelterController)
+const fosterController=require("./controllers/fostercontrollers.js")
+app.use("/foster",fosterController)
 
 app.listen(8080, () => {
     console.log("Server is running on port 8080")

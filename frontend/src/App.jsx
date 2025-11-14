@@ -17,6 +17,10 @@ import AdopterHomepage from './pages/adopterhomepage'
 import RescueShelterRegister from './pages/rescueshelterregister'
 import RescueShelterLogin from './pages/rescueshelterlogin'
 import RescueShelterHomePage from './pages/rescueshelterhomepage'
+import FosterRegister from './pages/fosterregister'
+import FosterLogin from './pages/fosterlogin'
+import FosterHomePage from './pages/fosterhomepage'
+import AdminLogin from './pages/adminlogin'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -37,6 +41,10 @@ function App() {
         <Route path="/register/rescueshelter" element={<RescueShelterRegister/>} />
         <Route path="/rescueshelterlogin" element={<RescueShelterLogin/>} />
         <Route path="/rescueshelterhomepage" element={<RescueShelterHomePage/>}/>
+        <Route path="/register/foster" element={<FosterRegister/>} />
+        <Route path="/fosterlogin" element={<FosterLogin/>} />
+        <Route path="/fosterhomepage" element={<FosterHomePage/>}/>
+        <Route path="/adminlogin" element={<AdminLogin/>} />
         </Routes>
     </>
   )

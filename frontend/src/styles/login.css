@@ -30,7 +30,7 @@
 
 .login-header h2 {
   font-size: 1.6rem;
-  color: #2b6777;
+  color: #10b41d;
 }
 
 .login-header span {
@@ -90,7 +90,7 @@
 }
 
 .login-btn:hover {
-  background-color: #2b6777;
+  background-color: #0bc650;
 }
 
 /* --- Register link --- */
@@ -101,7 +101,7 @@
 }
 
 .register-link a {
-  color: #2b6777;
+  color: #078621;
   font-weight: 600;
   text-decoration: none;
 }

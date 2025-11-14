@@ -1,0 +1,121 @@
+/* Foster Login Page Styling */
+
+.foster-login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://cdn.pixabay.com/photo/2016/03/27/21/16/dog-1284307_1280.jpg")
+      no-repeat center center/cover;
+  font-family: "Poppins", sans-serif;
+}
+
+.foster-login-form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 50px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.foster-login-form h2 {
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.foster-login-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 8px;
+  color: #444;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.foster-login-form input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.foster-login-form input:focus {
+  border-color: #ff914d;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 145, 77, 0.6);
+}
+
+.text-danger {
+  color: red;
+  font-size: 13px;
+  margin-top: -8px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.foster-login-form button {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #ff914d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.foster-login-form button:hover {
+  background-color: #e57a2c;
+}
+
+.foster-login-form p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.foster-login-form p a {
+  color: #ff914d;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.foster-login-form p a:hover {
+  text-decoration: underline;
+}
+
+.home-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+}
+
+.home-link:hover {
+  color: #ff914d;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .foster-login-form {
+    padding: 30px 25px;
+    width: 90%;
+  }
+
+  .foster-login-form h2 {
+    font-size: 22px;
+  }
+}

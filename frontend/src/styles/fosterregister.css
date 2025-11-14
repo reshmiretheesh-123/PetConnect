@@ -1,0 +1,118 @@
+/* Foster Register Page */
+
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://cdn.pixabay.com/photo/2015/02/05/08/12/puppy-624387_1280.jpg")
+      no-repeat center center/cover;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.foster-form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 50px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.foster-form h2 {
+  color: #333;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.foster-form label {
+  display: block;
+  text-align: left;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.foster-form input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.foster-form input:focus {
+  border-color: #ff914d;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 145, 77, 0.6);
+}
+
+.text-danger {
+  color: red;
+  font-size: 13px;
+  text-align: left;
+  margin-top: -8px;
+  margin-bottom: 5px;
+}
+
+.foster-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff914d;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.foster-form button:hover {
+  background-color: #e57a2c;
+}
+
+.foster-form p {
+  font-size: 14px;
+  color: #333;
+  margin-top: 15px;
+}
+
+.foster-form p a {
+  color: #ff914d;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.foster-form p a:hover {
+  text-decoration: underline;
+}
+
+.home-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #555;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.home-link:hover {
+  color: #ff914d;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .foster-form {
+    padding: 30px 25px;
+  }
+
+  .foster-form h2 {
+    font-size: 22px;
+  }
+}

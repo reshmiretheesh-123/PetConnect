@@ -52,7 +52,7 @@
 
 .nav-link:hover {
   background: rgba(255, 255, 255, 0.2);
-  color: #3b1fc5;
+  color: #29976b;
 }
 
 /* Dropdown */
@@ -60,10 +60,10 @@
   position: absolute;
   top: 120%;
   left: 0;
-  background: #673131;
+  background: #fff;
   border-radius: 8px;
   min-width: 170px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(13, 127, 114, 0.15);
   display: none;
   flex-direction: column;
   padding: 0.5rem 0;

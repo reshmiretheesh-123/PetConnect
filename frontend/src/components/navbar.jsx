@@ -35,7 +35,7 @@ function Navbar() {
               <li><Link to="/login" className="dropdown-item">Pet Owner</Link></li>
               <li><Link to="/adopterlogin" className="dropdown-item">Adopter</Link></li>
               <li><Link to="/fosterlogin" className="dropdown-item">Foster</Link></li>
-              <li><Link to="/rescuelogin" className="dropdown-item">Rescue/Shelter</Link></li>
+              <li><Link to="/rescueshelterlogin" className="dropdown-item">Rescue/Shelter</Link></li>
               <li><Link to="/adminlogin" className="dropdown-item">Admin</Link></li>
             </ul>
           </li>
