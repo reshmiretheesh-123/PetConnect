@@ -21,9 +21,9 @@ function AdopterHomepage() {
           <li><Link to="/adoptpets">Adopt Pets</Link></li>
           <li><Link to="/applicationstatus">Application Status</Link></li>
           <li><Link to="/adoptedpets">Adopted Pets</Link></li>
-          <li><Link to="/profile">Profile</Link></li>
+          <li><Link to="/adopterprofile">Profile</Link></li>
         </ul>
-        <button className="logout-btn" onClick={handleLogout}>Logout</button>
+        <button className="adopterlogout-btn" onClick={handleLogout}>Logout</button>
       </nav>
 
       {/* Hero Section */}

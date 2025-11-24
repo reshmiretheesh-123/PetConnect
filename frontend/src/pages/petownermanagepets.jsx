@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from "react";
-import "../styles/managepetss.css";
+import "../styles/petownermanagepetss.css";
+import instance from "../utils/apiClient";
 
 function ManagePets() {
   const [showForm, setShowForm] = useState(false);
   const [pets, setPets] = useState([]);
 
   // Fetch pets from backend
-  useEffect(() => {
-    fetch("http://localhost:8080/pet")
-      .then((res) => res.json())
-      .then((data) => setPets(data))
-      .catch((err) => console.error("Error fetching pets:", err));
-  }, []);
-
+  
+   async function getinfo(){
+        const response=await instance.get("/managepets/viewpets")
+        setPets(response.data)
+   }
   const handlePetAdded = (newPet) => {
     alert("Pet added successfully!");
     setShowForm(false);
-    setPets([...pets, newPet]);
+    
   };
-
+   useEffect(()=>{
+       getinfo()
+   },[showForm])
   return (
     <div className="managepets-container">
       <div className="header-section">
@@ -78,17 +79,13 @@ function AddPetForm({ onClose, onPetAdded }) {
       formData.append(key, pet[key]);
     });
 
-    const res = await fetch("http://localhost:8080/pet/add", {
-      method: "POST",
-      body: formData,
-    });
+    
+    const response=await instance.post("/managepets/addpets" ,formData)
+ 
 
-    const data = await res.json();
-    if (res.ok) {
-      onPetAdded(data.pet);
-    } else {
-      alert("Error adding pet: " + data.message);
-    }
+    const data = response.data
+    
+      onPetAdded(formData);
   };
 
   return (
@@ -105,7 +102,7 @@ function AddPetForm({ onClose, onPetAdded }) {
           <input type="text" name="vaccinations" placeholder="Vaccinations" value={pet.vaccinations} onChange={handleChange} required />
           <div className="form-buttons">
             <button type="submit">Add Pet</button>
-            <button type="button" onClick={onClose} className="cancel-btn">Cancel</button>
+            <button type="button" onClick={handleSubmit} className="cancel-btn">Cancel</button>
           </div>
         </form>
       </div>

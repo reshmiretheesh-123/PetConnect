@@ -27,9 +27,14 @@
 
 .pet-list {
   margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  display: flex;
+  flex-direction: row;
+  /* grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); */
   gap: 25px;
+}
+
+.pet-list p{
+  line-height: 30px;
 }
 
 .pet-card {
@@ -38,6 +43,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   transition: all 0.3s ease;
+  width :300px
 }
 
 .pet-card:hover {
@@ -45,7 +51,7 @@
 }
 
 .pet-card img {
-  width: 100%;
+  width: 260px;
   height: 180px;
   object-fit: cover;
   border-radius: 10px;

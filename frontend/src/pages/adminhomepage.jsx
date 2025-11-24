@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 import instance from "../utils/apiClient";
 
 function AdminHomePage() {
+  function Logout(){
+    const confirmLogout = window.confirm("Are you sure want to logout");
+    if(confirmLogout){
+      localStorage.clear();
+      window.location.href ="/";
+    }
+  }
   const [counts, setCounts] = useState({
     totalUsers: 0,
     totalPets: 0,
@@ -38,7 +45,7 @@ function AdminHomePage() {
 
         <ul className="menu">
           <li><Link to="/admin/home">Dashboard</Link></li>
-          <li><Link to="/admin/petowners">Pet Owners</Link></li>
+          <li><Link to="/adminpetowner">Pet Owners</Link></li>
           <li><Link to="/admin/adopters">Adopters</Link></li>
           <li><Link to="/admin/fosters">Fosters</Link></li>
           <li><Link to="/admin/shelters">Rescue Shelters</Link></li>
@@ -53,7 +60,7 @@ function AdminHomePage() {
       <div className="main">
         <div className="topbar">
           <h3>Dashboard</h3>
-          <button className="logout-btn">Logout</button>
+          <button onClick={Logout} className="adminlogout-btn"><Link>Logout</Link></button>
         </div>
 
         {/* Dashboard Cards */}

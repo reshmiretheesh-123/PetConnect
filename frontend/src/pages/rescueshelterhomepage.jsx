@@ -22,9 +22,9 @@ function RescueShelterHomepage() {
           <li><Link to="/rescueshelter/lostfound">Lost/Found Reports</Link></li>
           <li><Link to="/rescueshelter/adoptedpets">Adopted Pets</Link></li>
           <li><Link to="/rescueshelter/fosteredpets">Fostered Pets</Link></li>
-          <li><Link to="/rescueshelter/profile">Profile</Link></li>
+          <li><Link to="/rescueshelterprofile">Profile</Link></li>
         </ul>
-        <button className="logout-btn" onClick={handleLogout}>Logout</button>
+        <button className="rescueshelterlogout-btn" onClick={handleLogout}>Logout</button>
       </nav>
 
       {/* Hero Section */}

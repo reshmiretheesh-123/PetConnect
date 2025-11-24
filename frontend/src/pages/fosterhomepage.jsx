@@ -18,7 +18,7 @@ function FosterHomepage() {
           <li><Link to="/applicationstatus" className="sidebar-item">Application Status</Link></li>
           <li><Link to="/assignedpets" className="sidebar-item">Assigned Pets</Link></li>
           <li><Link to="/viewfosterpets" className="sidebar-item">View Foster Pets</Link></li>
-          <li><Link to="/fostereditprofile" className="sidebar-item">Edit Profile</Link></li>
+          <li><Link to="/fosterupdateprofile" className="sidebar-item">Edit Profile</Link></li>
           <li><Link to="/fosterprofile" className="sidebar-item">Profile</Link></li>
 
           <li><button className="logout-btn" onClick={() => {

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/navbar";
 import "../styles/petownerprofile.css";
 import instance from "../utils/apiClient";
+import PetOwnerHomepage from "./petownerhomepage";
 
 function PetOwnerProfile() {
   const [details, setDetails] = useState(null);
@@ -22,7 +23,7 @@ function PetOwnerProfile() {
 
   return (
     <>
-      <Navbar />
+      {/* <PetOwnerHomepage /> */}
 
       <div className="petowner-profile-container">
         <div className="profile-card">
@@ -60,7 +61,7 @@ function PetOwnerProfile() {
           </div>
 
           <button className="update-btn">
-            <Link to="/petownerprofileedit">Update Profile</Link>
+            <Link to="/petownerupdateprofile">Update Profile</Link>
           </button>
 
         </div>

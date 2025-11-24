@@ -1,0 +1,64 @@
+.rescueshelter-profile-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.profile-card {
+  background: #fff;
+  width: 420px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.profile-header {
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.profile-name {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.profile-role {
+  font-size: 16px;
+  color: #666;
+}
+
+.profile-details {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.detail-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+.update-btn {
+  margin-top: 20px;
+  width: 100%;
+  background: #0077ff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.update-btn a {
+  color: #fff;
+  text-decoration: none;
+}

@@ -1,0 +1,62 @@
+.petowner-edit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.edit-card {
+  background: white;
+  padding: 30px;
+  width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.edit-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.edit-form .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.update-button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: rgb(48, 125, 252);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.update-button:hover {
+  background: rgb(30, 100, 230);
+}

@@ -46,4 +46,31 @@ router.post("/login",async (req,res) => {
         }
     }
 })
+
+router.get("/profile", async (req, res) => {
+    const token = req.headers.authorization.slice(7)
+    const decoded = jwt.verify(token, process.env.JWT_TOKEN)
+    const foster = await Foster.findOne({ "_id": decoded.id })
+    res.send({ message: "Foster Profile", foster })
+})
+
+router.put("/updateprofile", upload.fields([{ name: "adhaar", maxCount: 1 }, { name: "image", maxCount: 1 }]), async (req, res) => {
+    try {
+        const token = req.headers.authorization.slice(7)
+        const decoded = jwt.verify(token, process.env.JWT_TOKEN)
+        const { fostername, emailid,address, contact } = req.body
+        await Foster.findByIdAndUpdate(decoded.id, {
+            fostername,
+            emailid,
+            address,
+            contact,
+            adhaar: req.files?.adhaar && req.files.adhaar[0].filename,
+            image: req.files?.image && req.files.image[0].filename,
+        })
+        res.send({ message: "Updated Successfully" })
+    }
+    catch (e) {
+        res.status(403).send({ message: "Not Authorised" })
+    }
+})
 module.exports=router

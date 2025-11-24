@@ -1,88 +1,158 @@
-.adopter-homepage {
-  background-color: #f9f9fb;
-  min-height: 100vh;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
-/* Navbar */
+/* MAIN CONTAINER WITH OPTIONAL BACKGROUND IMAGE */
+.adopter-homepage {
+  width: 100%;
+  min-height: 100vh;
+  background: url("https://img.freepik.com/free-photo/light-pastel-watercolor-texture-background_1083-172.jpg")
+    no-repeat center center/cover;
+}
+
+/* ---------------- NAVBAR ---------------- */
 .navbar {
+  width: 100%;
+  padding: 18px 50px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(6px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .logo {
-  color: #ff6600;
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ff6f3c;
 }
 
+/* NAV LINKS */
 .nav-links {
-  display: flex;
   list-style: none;
+  display: flex;
   gap: 25px;
 }
 
 .nav-links li a {
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
+  font-size: 16px;
+  color: #444;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: #ff6600;
+  color: #ff6f3c;
 }
 
-.logout-btn {
-  background: #ff6600;
-  color: white;
-  border: none;
+/* LOGOUT BUTTON */
+.adopterlogout-btn {
   padding: 8px 16px;
-  border-radius: 8px;
+  background: #ff6f3c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
 .logout-btn:hover {
-  background: #e05500;
+  background: #e25829;
+  transform: scale(1.05);
 }
 
-/* Hero Section */
+/* ---------------- HERO SECTION ---------------- */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 60px 80px;
+  gap: 40px;
 }
 
-.hero-text {
-  max-width: 50%;
-}
-
+/* LEFT HERO TEXT */
 .hero-text h5 {
-  color: #888;
-  letter-spacing: 1px;
+  color: #ff6f3c;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
 .hero-text h1 {
   font-size: 42px;
-  color: #333;
-  margin: 15px 0;
+  line-height: 56px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 15px;
 }
 
 .hero-text h1 span {
-  color: #ff6600;
+  color: #ff6f3c;
 }
 
 .hero-text p {
-  color: #666;
-  line-height: 1.6;
+  font-size: 16px;
+  color: #555;
+  max-width: 450px;
+  line-height: 26px;
 }
 
+/* RIGHT HERO IMAGE */
 .hero-image img {
-  width: 420px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 380px;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .hero-text p {
+    margin: 0 auto;
+  }
+
+  .hero-image img {
+    width: 300px;
+    margin-top: 20px;
+  }
+
+  .navbar {
+    padding: 15px 25px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    font-size: 22px;
+  }
+
+  .nav-links {
+    display: none; /* For simple mobile UI */
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+  }
 }

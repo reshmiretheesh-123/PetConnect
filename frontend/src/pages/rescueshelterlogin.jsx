@@ -34,7 +34,8 @@ function RescueShelterLogin() {
         const response = await instance.post("/rescueshelter/login", data);
         alert("Login Successful");
         navigate("/rescueshelterhomepage"); // redirect after login
-      } catch (err) {
+      } 
+      catch (err) {
         console.error(err);
         alert(err.response?.data?.message || "Invalid credentials");
       }

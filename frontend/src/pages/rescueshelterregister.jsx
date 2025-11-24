@@ -120,7 +120,7 @@ function RescueShelterRegister() {
                 formData.append("adhaar", data.adhaar)
                 formData.append("image", data.image)
                 
-                const response = await instance.post("/rescueshelter", formData)
+                const response = await instance.post("/rescueshelter/register", formData)
                 alert("Registered Successfully")
                 navigate("/rescueshelterlogin")
             }

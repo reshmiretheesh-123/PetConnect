@@ -26,11 +26,11 @@ function PetOwnerHomepage() {
           <li onClick={() => navigate("/petownerhomepage")}>Home</li>
           <li onClick={() => navigate("/managepets")}>Manage Pets</li>
           <li onClick={() => navigate("/findpet")}>Find Pet</li>
-          <li onClick={() => navigate("/lostfoundreports")}>Lost/Found Reports</li>
+          {/* <li onClick={() => navigate("/lostfoundreports")}>Lost/Found Reports</li> */}
           <li onClick={() => navigate("/petownerprofile")}>Profile</li>
         </ul>
 
-        <button className="logout-btn" onClick={handleLogout}>
+        <button className="petownerlogout-btn" onClick={handleLogout}>
           Logout
         </button>
       </nav>

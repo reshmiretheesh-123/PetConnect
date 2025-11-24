@@ -24,8 +24,8 @@ router.post("/register",upload.fields([{name:"adhaar",maxCount:1},{name:"image",
 })
 
 router.post("/login",async (req,res) => {
-    const { username, password } =req.body
-    const rescueshelter = await RescueShelter.findOne({ username })
+    const { userid, password } =req.body
+    const rescueshelter = await RescueShelter.findOne({ userid })
     if (!rescueshelter){
         res.status(400).send({
             message:  "Invalid username or password"
@@ -36,7 +36,7 @@ router.post("/login",async (req,res) => {
         if (iscorrectPassword){
             const token = jwt.sign({ id: rescueshelter._id }, process.env.JWT_TOKEN)
             res.send({
-                message: "Adopter Logined successfully", rescueshelter, token
+                message: "RescueShelter Logined successfully", rescueshelter, token
             })
         }
         else {
@@ -45,6 +45,12 @@ router.post("/login",async (req,res) => {
             })
         }
     }
+})
+router.get("/profile", async (req, res) => {
+    const token = req.headers.authorization.slice(7)
+    const decoded = jwt.verify(token, process.env.JWT_TOKEN)
+    const rescueshelter = await RescueShelter.findOne({ "_id": decoded.id })
+    res.send({ message: "Rescueshelter Profile", rescueshelter })
 })
 
 module.exports=router

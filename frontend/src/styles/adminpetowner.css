@@ -1,0 +1,22 @@
+.admin-owner-container {
+  padding: 20px;
+  margin-left: 230px;
+}
+
+.owners-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.owners-table th,
+.owners-table td {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+}
+
+.owner-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
