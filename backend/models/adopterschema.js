@@ -6,7 +6,8 @@ const adopterschema = mongoose.Schema({
     contact: { type: String, required: true },
     password: { type: String, required: true },
     adhaar: { type: String, required: true },
-    image: { type: String }
+    image: { type: String },
+    Approved: { type: Boolean,default:false}
 })
 const Adopter = mongoose.model("adopter", adopterschema)
 

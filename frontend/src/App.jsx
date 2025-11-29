@@ -30,6 +30,11 @@ import FosterProfile from './pages/fosterprofile'
 import FosterUpdateProfile from './pages/fosterupdateprofile'
 import RescueShelterProfile from './pages/rescueshelterprofile'
 import AdminPetOwner from './pages/adminpetowner'
+import RescueShelterUpdateprofile from './pages/rescueshelterupdateprofile'
+import AdminAdopter from './pages/adminadopter'
+import AdminFoster from './pages/adminfoster'
+import AdminRescueshelter from './pages/adminrescueshelter'
+import PetownerForgotpassword from './pages/petownerforgotpassword'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -64,6 +69,11 @@ function App() {
         <Route path="/fosterupdateprofile" element={<FosterUpdateProfile />} />
         <Route path="/rescueshelterprofile" element={<RescueShelterProfile />} />
         <Route path="/adminpetowner" element={<AdminPetOwner/>} />
+        <Route path="/rescueshelterupdateprofile" element={<RescueShelterUpdateprofile />} />
+        <Route path="/adminadopter" element={<AdminAdopter/>} />
+         <Route path="/adminfoster" element={<AdminFoster/>} />
+         <Route path="/adminrescueshelter" element={<AdminRescueshelter/>} />
+         <Route path="/petownerforgotpassword" element={<PetownerForgotpassword/>} />
         
       </Routes>
     </>

@@ -1,0 +1,149 @@
+/* Container Styling */
+.admin-adopter-container {
+  width: 100%;
+  padding: 30px;
+  background: #f7fafc;
+  min-height: 100vh;
+}
+
+/* Heading */
+.admin-adopter-container h2 {
+  text-align: center;
+  color: #2d4e6c;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Table Styling */
+.adopters-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Table Header */
+.owners-table thead tr {
+  background: #2d4e6c;
+  color: #fff;
+  text-align: center;
+}
+
+.owners-table th {
+  padding: 14px 10px;
+  font-weight: 600;
+}
+
+/* Table Body */
+.owners-table td {
+  padding: 12px 10px;
+  text-align: center;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/* Profile Image */
+.adopter-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease-in-out;
+}
+
+.adopter-img:hover {
+  transform: scale(1.08);
+}
+
+/* Aadhaar Link */
+.owners-table a {
+  background: #2d4e6c;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.owners-table a:hover {
+  background: #1e364b;
+}
+
+/* Row Hover Effect */
+.owners-table tbody tr:hover {
+  background-color: #ecf4f7;
+  transition: 0.2s;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  .owners-table thead {
+    display: none;
+  }
+
+  .owners-table,
+  .owners-table tbody,
+  .owners-table tr,
+  .owners-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .owners-table tr {
+    margin-bottom: 12px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  }
+
+  .owners-table td {
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .owners-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    width: 50%;
+    text-align: left;
+    font-weight: bold;
+    color: #2d4e6c;
+  }
+}
+.status-badge {
+    display: inline-flex;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.status-badge.activated {
+    background-color: #d4f8e8;
+    color: #0e8a44;
+}
+
+.status-badge.deactivated {
+    background-color: #ffe1e1;
+    color: #d10000;
+}
+
+.status-badge:hover {
+    opacity: 0.85;
+}
+.btn-primary{
+  background-color: blanchedalmond;
+  border: none;
+}
+.btn-secondary{
+  background-color: aqua;
+  border: none;
+}

@@ -4,7 +4,7 @@ import "../styles/rescueshelterprofile.css";
 import instance from "../utils/apiClient";
 
 function RescueShelterProfile() {
-  const [details, setDetails] = useState(null);
+  const [details, setDetails] = useState();
 
   async function fetchRescueData() {
     try {

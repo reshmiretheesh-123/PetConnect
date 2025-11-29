@@ -46,9 +46,9 @@ function AdminHomePage() {
         <ul className="menu">
           <li><Link to="/admin/home">Dashboard</Link></li>
           <li><Link to="/adminpetowner">Pet Owners</Link></li>
-          <li><Link to="/admin/adopters">Adopters</Link></li>
-          <li><Link to="/admin/fosters">Fosters</Link></li>
-          <li><Link to="/admin/shelters">Rescue Shelters</Link></li>
+          <li><Link to="/adminadopter">Adopters</Link></li>
+          <li><Link to="/adminfoster">Fosters</Link></li>
+          <li><Link to="/adminrescueshelter">Rescue Shelters</Link></li>
           <li><Link to="/admin/petmanagement">Pet Management</Link></li>
           <li><Link to="/admin/contact">Contact Submissions</Link></li>
           <li><Link to="/admin/lostfound">Lost & Found Pets</Link></li>

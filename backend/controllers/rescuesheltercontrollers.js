@@ -53,4 +53,24 @@ router.get("/profile", async (req, res) => {
     res.send({ message: "Rescueshelter Profile", rescueshelter })
 })
 
+router.put("/updateprofile", upload.fields([{ name: "adhaar", maxCount: 1 }, { name: "image", maxCount: 1 }]), async (req, res) => {
+    try {
+        const token = req.headers.authorization.slice(7)
+        const decoded = jwt.verify(token, process.env.JWT_TOKEN)
+        const { name, userid,address, contact } = req.body
+        await RescueShelter.findByIdAndUpdate(decoded.id, {
+            name,
+            userid,
+            address,
+            contact,
+            adhaar: req.files?.adhaar && req.files.adhaar[0].filename,
+            image: req.files?.image && req.files.image[0].filename,
+        })
+        res.send({ message: "Updated Successfully" })
+    }
+    catch (e) {
+        res.status(403).send({ message: "Not Authorised" })
+    }
+})
+
 module.exports=router

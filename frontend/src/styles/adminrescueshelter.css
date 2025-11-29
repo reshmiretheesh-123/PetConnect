@@ -1,0 +1,127 @@
+.admin-rescueshelter-container {
+  width: 85%;
+  margin: 50px auto;
+  padding: 30px 40px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+.admin-rescueshelter-container h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #0077ff;
+  margin-bottom: 30px;
+}
+
+/* Table Styling */
+.rescueshelter-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+/* Table Header */
+.rescueshelter-table thead th {
+  background: #556b82;
+  color: white;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Rounded header corners */
+.rescueshelter-table thead th:first-child {
+  border-top-left-radius: 12px;
+}
+.rescueshelter-table thead th:last-child {
+  border-top-right-radius: 12px;
+}
+
+/* Table Rows */
+.rescueshelter-table tbody tr {
+  border-bottom: 1px solid #dcdcdc;
+  transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.rescueshelter-table tbody tr:hover {
+  background-color: #f4f7ff;
+}
+
+/* Table Cell Style */
+.rescueshelter-table td {
+  padding: 16px 10px;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Round Profile Images */
+.rescueshelter-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #1e63ff;
+}
+
+/* Aadhaar Link Style */
+.rescueshelter-table a {
+  color: #0066ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.rescueshelter-table a:hover {
+  color: #003db5;
+  text-decoration: underline;
+}
+
+/* Buttons */
+.rescueshelter-table button {
+  background: #0099ff;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rescueshelter-table button:hover {
+  background: #0074d9;
+  transform: scale(1.05);
+}
+
+/* Status Badges */
+.rescueshelter-status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.activated {
+  background-color: #d4ffe0;
+  color: #0a7426;
+  border: 1px solid #41c765;
+}
+
+.deactivated {
+  background-color: #ffe3e3;
+  color: #b50000;
+  border: 1px solid #ff5959;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .rescueshelter-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

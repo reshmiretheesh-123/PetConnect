@@ -3,7 +3,6 @@ import instance from "../utils/apiClient";
 import "../styles/adminpetowner.css";
 
 function AdminPetOwner() {
-const [owners, setOwners] = useState([]);
 const [details, setDetails] = useState([])
     async function petownerData() {
         const response = await instance.get("/admin/petownerview")
@@ -30,11 +29,11 @@ const [details, setDetails] = useState([])
         </thead>
 
         <tbody>
-          {owners.map((item) => (
+          {details.map((item) => (
             <tr key={item._id}>
               <td>
                 <img
-                  src={item.image ? instance.defaults.baseURL + item.image : ""}
+                  src={"http://localhost:8080/uploads/"+item.image}
                   alt="Profile"
                   className="owner-img"
                 />
@@ -46,7 +45,7 @@ const [details, setDetails] = useState([])
               <td>
                 {item.adhaar && (
                   <a
-                    href={instance.defaults.baseURL + item.adhaar}
+                    href={"http://localhost:8080/uploads/"+ item.adhaar}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

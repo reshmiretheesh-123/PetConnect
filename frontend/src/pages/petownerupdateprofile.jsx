@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/petownerupdateprofile.css";
 import instance from "../utils/apiClient";
-// import Navbar from "../components/navbar";
+
 
 function PetownerUpdateprofile() {
   const [details, setDetails] = useState({});

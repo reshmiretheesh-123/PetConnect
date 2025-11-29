@@ -1,0 +1,89 @@
+.admin-foster-container {
+  width: 85%;
+  margin: 50px auto;
+  padding: 30px 40px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+.admin-foster-container h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #0077ff;
+  margin-bottom: 30px;
+}
+
+/* Table Styling */
+.fosters-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+/* Table Header */
+.fosters-table thead th {
+  background: #556b82;
+  color: white;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Rounded top corners of header */
+.fosters-table thead th:first-child {
+  border-top-left-radius: 10px;
+}
+.fosters-table thead th:last-child {
+  border-top-right-radius: 10px;
+}
+
+/* Table Content Rows */
+.fosters-table tbody tr {
+  border-bottom: 1px solid #e5e5e5;
+  transition: 0.3s;
+}
+
+/* Row Hover Effect */
+.fosters-table tbody tr:hover {
+  background-color: #f4f7ff;
+}
+
+/* Table Cell Style */
+.fosters-table td {
+  padding: 18px 12px;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Round Profile Image */
+.foster-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2a63ff;
+}
+
+/* Aadhaar Link Style */
+.fosters-table a {
+  font-weight: 600;
+  color: #0066ff;
+  text-decoration: none;
+}
+
+.fosters-table a:hover {
+  text-decoration: underline;
+  color: #0044cc;
+}
+
+/* Responsive Fix */
+@media (max-width: 900px) {
+  .fosters-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

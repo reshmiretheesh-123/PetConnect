@@ -85,7 +85,9 @@ return (
         <p className="register-link">
           Don’t have an account?{" "}
           <Link to="/register">Register here</Link>
+          
         </p>
+        <Link to="/petownerforgotpassword">ForgotPassword</Link> 
       </form>
     </div>
   </section>

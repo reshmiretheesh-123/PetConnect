@@ -1,0 +1,104 @@
+/* Container Styling */
+.rescueshelter-edit-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f7fa;
+  padding: 20px;
+}
+
+/* Card Styling */
+.edit-card {
+  width: 100%;
+  max-width: 650px;
+  background: #ffffff;
+  padding: 30px 35px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Title */
+.edit-card h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #2b547e;
+  font-weight: bold;
+}
+
+/* Form Grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Full width item */
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+/* Label Styling */
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Input Styling */
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #2b547e;
+  box-shadow: 0px 0px 5px rgba(43, 84, 126, 0.4);
+}
+
+/* Submit Button */
+.update-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2b547e;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.update-button:hover {
+  background-color: #1d3b5a;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

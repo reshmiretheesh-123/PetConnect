@@ -54,7 +54,6 @@ router.get("/profile", async (req, res) => {
     res.send({ message: "Petowner Profile", petowner })
 })
 
-
 router.put("/updateprofile", upload.fields([{ name: "adhaar", maxCount: 1 }, { name: "image", maxCount: 1 }]), async (req, res) => {
     try {
         const token = req.headers.authorization.slice(7)
@@ -74,6 +73,7 @@ router.put("/updateprofile", upload.fields([{ name: "adhaar", maxCount: 1 }, { n
         res.status(403).send({ message: "Not Authorised" })
     }
 })
+
 
 
 
