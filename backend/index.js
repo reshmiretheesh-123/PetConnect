@@ -20,6 +20,8 @@ app.use("/foster", fosterController)
 app.use("/managepets", require("./controllers/petownermanagepets.js"))
 const adminController = require("./controllers/admincontrollers.js")
 app.use("/admin", adminController)
+const petownerfindpetController = require("./controllers/petownerfindpetcontrollers.js")
+app.use("/findpet", petownerfindpetController)
 
 app.listen(8080, () => {
     console.log("Server is running on port 8080")

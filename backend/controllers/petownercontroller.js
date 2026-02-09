@@ -4,6 +4,8 @@ const upload = require("../services/imageservices")
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 const Petowner = require("../models/petownerschema")
+const transport = require("../services/emailservices")
+const { randomBytes } = require("node:crypto")
 
 router.post("/register", upload.fields([{ name: "adhaar", maxCount: 1 }, { name: "image", maxCount: 1 }]), async (req, res) => {
     const { name, username, address, contact, password } = req.body
@@ -71,6 +73,44 @@ router.put("/updateprofile", upload.fields([{ name: "adhaar", maxCount: 1 }, { n
     }
     catch (e) {
         res.status(403).send({ message: "Not Authorised" })
+    }
+})
+
+router.post("/forgotpassword" ,async (req,res) => {
+    const usernameid = req.body.username
+    const petowner = await Petowner.findOne({ username: usernameid})
+    if (!petowner) {
+        res.status(400).send({
+            message: "No Such User"
+        })
+    }
+    else{
+        const token = Buffer.from(randomBytes(56)).toString('hex');
+        petowner.token = token
+        await petowner.save()
+        await transport.sendMail({
+            from: `"petowner admin"<${process.env.GMAIL_ADDRESS}>` ,
+            to: petowner.username ,
+            subject: "Password reset email" ,
+            html: `Here is your password reset link:<a href="http://localhost:5173/petownerresetpassword?=${token}">link</a>`
+        })
+        res.send({
+            message: "Email sent"
+        })
+    }
+})
+router.post("/resetpassword", async (req,res)=> {
+    const {password, token }= req.body
+    const petowner = await Petowner.findOne({ token })
+    if(petowner) {
+        const hashPassword = bcrypt.hashSync(password,10)
+        petowner.password = hashPassword
+        petowner.token = null
+        await petowner.save()
+        res.send("Password Reset")
+    }
+    else {
+        res.status(400).send("Petowner Not Found")
     }
 })
 

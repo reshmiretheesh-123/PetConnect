@@ -35,6 +35,11 @@ import AdminAdopter from './pages/adminadopter'
 import AdminFoster from './pages/adminfoster'
 import AdminRescueshelter from './pages/adminrescueshelter'
 import PetownerForgotpassword from './pages/petownerforgotpassword'
+import PetownerResetPassword from './pages/petownerresetpassword'
+import PetOwnerFindPet from './pages/petownerfindpet'
+import PetOwnerFindPetForm from './pages/petownerfindpetform'
+import AdoptPets from './pages/adoptpets'
+import Applicationrequest from './pages/applicationrequest'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -74,6 +79,12 @@ function App() {
          <Route path="/adminfoster" element={<AdminFoster/>} />
          <Route path="/adminrescueshelter" element={<AdminRescueshelter/>} />
          <Route path="/petownerforgotpassword" element={<PetownerForgotpassword/>} />
+         <Route path="/petownerresetpassword" element={<PetownerResetPassword/>} />
+         <Route path="/petownerfindpet" element={<PetOwnerFindPet/>} />
+         <Route path="/petownerfindpet/findpet" element={<PetOwnerFindPetForm/>} />
+         <Route path="/adoptpets" element={<AdoptPets/>} />
+                  <Route path="/applicationrequest" element={<Applicationrequest/>} />
+
         
       </Routes>
     </>

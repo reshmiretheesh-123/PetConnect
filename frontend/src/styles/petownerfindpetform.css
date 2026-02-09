@@ -1,0 +1,65 @@
+.findpet-edit-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/images/petsbg.jpg") no-repeat center/cover;
+  padding: 20px;
+}
+
+.edit-card {
+  background: rgba(255, 255, 255, 0.9);
+  width: 380px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+.edit-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+.findpet-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.findpet-edit-form label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+.findpet-edit-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+.findpet-edit-form input:focus {
+  border: 1px solid #6c63ff;
+}
+
+.update-button {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.update-button:hover {
+  background-color: #534bf5;
+  transform: scale(1.03);
+}

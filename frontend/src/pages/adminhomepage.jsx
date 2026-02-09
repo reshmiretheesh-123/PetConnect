@@ -52,7 +52,7 @@ function AdminHomePage() {
           <li><Link to="/admin/petmanagement">Pet Management</Link></li>
           <li><Link to="/admin/contact">Contact Submissions</Link></li>
           <li><Link to="/admin/lostfound">Lost & Found Pets</Link></li>
-          <li><Link to="/admin/applications">Adoption Applications</Link></li>
+          <li><Link to="/applicationrequest">Adoption Applications</Link></li>
         </ul>
       </div>
 

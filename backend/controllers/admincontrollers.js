@@ -6,6 +6,7 @@ const Petowner= require("../models/petownerschema")
 const Adopter= require("../models/adopterschema")
 const Foster= require('../models/fosterschema')
 const Rescueshelter= require('../models/rescueshelterschema')
+const Application=require("../models/adoptionrequestschema")
 
 router.post("/login", async (req, res) => {
     const { username, password } = req.body
@@ -82,7 +83,30 @@ router.patch("/reject",adminVerify,async(req,res) => {
     })
 })
 
- 
+
+
+router.get("/adoptapplications", adminVerify, async (req, res) => {
+    const application= await Application.find().populate("petId")
+    res.send({
+        message: "Application request", application
+    })
+})
+
+ router.patch("/requestapprove",adminVerify,async(req,res) => {
+    const applicationid = req.body.applicationid
+    const applicationrequest = await Application.findByIdAndUpdate(applicationid, { Approved: true})
+    res.send({
+        message: "RescueShelter Activated", applicationrequest
+    })
+})
+
+router.patch("/requestreject",adminVerify,async(req,res) => {
+    const applicationid = req.body.applicationid
+    const applicationrequest = await Application.findByIdAndUpdate(applicationid, { Approved: false})
+    res.send({
+        message: "RescueShelter Rejected", applicationrequest
+    })
+})
 
 
 

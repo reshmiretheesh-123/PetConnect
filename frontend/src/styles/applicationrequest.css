@@ -1,0 +1,119 @@
+/* Page Background */
+.admin-adopter-container {
+  min-height: 100vh;
+  padding: 40px 30px;
+  background: linear-gradient(135deg, #f9f9ff, #eef3ff);
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+/* Title */
+.admin-adopter-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 26px;
+  color: #2c2c54;
+  letter-spacing: 1px;
+}
+
+/* Table Wrapper */
+.adopters-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.adopters-table thead {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #ffffff;
+}
+
+.adopters-table th,
+.adopters-table td {
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.adopters-table th {
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+/* Rows */
+.adopters-table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.adopters-table tbody tr:hover {
+  background-color: #f3f6ff;
+  transform: scale(1.01);
+}
+
+/* Status Pills */
+.status {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.status.approved {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+}
+
+.status.rejected {
+  background: linear-gradient(135deg, #ff6b6b, #ee5253);
+  color: white;
+}
+
+/* Buttons */
+.approve-btn,
+.reject-btn {
+  border: none;
+  padding: 7px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.approve-btn {
+  background: linear-gradient(135deg, #00b09b, #96c93d);
+  color: #ffffff;
+}
+
+.approve-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 176, 155, 0.4);
+}
+
+.reject-btn {
+  background: linear-gradient(135deg, #f85032, #e73827);
+  color: #ffffff;
+}
+
+.reject-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(231, 56, 39, 0.4);
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
+  .admin-adopter-container h2 {
+    font-size: 22px;
+  }
+
+  .adopters-table th,
+  .adopters-table td {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+}

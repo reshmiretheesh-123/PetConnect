@@ -25,8 +25,7 @@ function PetOwnerHomepage() {
         <ul className="nav-links">
           <li onClick={() => navigate("/petownerhomepage")}>Home</li>
           <li onClick={() => navigate("/managepets")}>Manage Pets</li>
-          <li onClick={() => navigate("/findpet")}>Find Pet</li>
-          {/* <li onClick={() => navigate("/lostfoundreports")}>Lost/Found Reports</li> */}
+          <li onClick={() => navigate("/petownerfindpet")}>Find Pet</li>
           <li onClick={() => navigate("/petownerprofile")}>Profile</li>
         </ul>
 
