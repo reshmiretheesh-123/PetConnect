@@ -105,4 +105,26 @@ router.post("/adoptionrequest", async (req, res) => {
     })
 })
 
+router.get("/applicationstatus", async (req, res) => {
+    const token = req.headers.authorization.slice(7)
+    const decoded = jwt.verify(token, process.env.JWT_TOKEN)
+    const status=await AdoptionRequest.find().populate("petId")
+     res.send({
+        message: "Adoption Request", status
+    })
+
+})
+router.get("/adoptedpets", async (req, res) => {
+    const token = req.headers.authorization.slice(7)
+    const decoded = jwt.verify(token, process.env.JWT_TOKEN)
+    const adoptedpets = await AdoptionRequest.find({Approved:"true"}).populate("petId")
+    res.send({ message: "Adopted Pets", adoptedpets })
+})
+
+
+
+
+
+
+
 module.exports = router 

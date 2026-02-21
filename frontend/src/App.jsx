@@ -40,6 +40,9 @@ import PetOwnerFindPet from './pages/petownerfindpet'
 import PetOwnerFindPetForm from './pages/petownerfindpetform'
 import AdoptPets from './pages/adoptpets'
 import Applicationrequest from './pages/applicationrequest'
+import Applicationstatus from './pages/applicationstatus'
+import Adoptedpets from './pages/adoptedpets'
+import Lostfoundpets from './pages/lostfoundreports'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -84,6 +87,10 @@ function App() {
          <Route path="/petownerfindpet/findpet" element={<PetOwnerFindPetForm/>} />
          <Route path="/adoptpets" element={<AdoptPets/>} />
                   <Route path="/applicationrequest" element={<Applicationrequest/>} />
+                  <Route path="/applicationstatus" element={<Applicationstatus/>} />
+                  <Route path="/adoptedpets" element={<Adoptedpets/>} />
+                   <Route path="/lostfoundpets" element={<Lostfoundpets/>} />
+                  
 
         
       </Routes>

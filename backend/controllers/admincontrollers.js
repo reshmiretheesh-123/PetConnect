@@ -7,6 +7,7 @@ const Adopter= require("../models/adopterschema")
 const Foster= require('../models/fosterschema')
 const Rescueshelter= require('../models/rescueshelterschema')
 const Application=require("../models/adoptionrequestschema")
+const Findpet=require("../models/petownerfindpetschema")
 
 router.post("/login", async (req, res) => {
     const { username, password } = req.body
@@ -105,6 +106,13 @@ router.patch("/requestreject",adminVerify,async(req,res) => {
     const applicationrequest = await Application.findByIdAndUpdate(applicationid, { Approved: false})
     res.send({
         message: "RescueShelter Rejected", applicationrequest
+    })
+})
+
+router.get("/lostfound", adminVerify, async (req, res) => {
+    const findpet= await Findpet.find()
+    res.send({
+        message: "Losted pets", findpet
     })
 })
 
