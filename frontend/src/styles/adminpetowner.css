@@ -1,22 +1,101 @@
 .admin-owner-container {
-  padding: 20px;
-  margin-left: 230px;
+  padding: 40px;
+  background: #f4f6fb;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
 }
 
+/* Title */
+.admin-owner-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+/* Table */
 .owners-table {
   width: 100%;
   border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  table-layout: fixed; /* important for equal spacing */
 }
 
-.owners-table th,
-.owners-table td {
-  border: 1px solid #ccc;
+/* Header */
+.owners-table thead {
+  background: #355674;
+  color: white;
+}
+
+.owners-table th {
+  padding: 16px;
+  font-size: 15px;
   text-align: center;
-  padding: 10px;
 }
 
+/* Body */
+.owners-table td {
+  padding: 18px 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  word-wrap: break-word;
+}
+
+/* Column widths */
+.owners-table th:nth-child(1),
+.owners-table td:nth-child(1) {
+  width: 12%;
+}
+
+.owners-table th:nth-child(2),
+.owners-table td:nth-child(2) {
+  width: 15%;
+}
+
+.owners-table th:nth-child(3),
+.owners-table td:nth-child(3) {
+  width: 23%;
+}
+
+.owners-table th:nth-child(4),
+.owners-table td:nth-child(4) {
+  width: 15%;
+}
+
+.owners-table th:nth-child(5),
+.owners-table td:nth-child(5) {
+  width: 20%;
+}
+
+.owners-table th:nth-child(6),
+.owners-table td:nth-child(6) {
+  width: 15%;
+}
+
+/* Profile Image */
 .owner-img {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Button */
+.owners-table a {
+  text-decoration: none;
+  background: #355674;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.owners-table a:hover {
+  background: #233b50;
+}
+
+/* Row Hover */
+.owners-table tbody tr:hover {
+  background: #f2f7ff;
 }

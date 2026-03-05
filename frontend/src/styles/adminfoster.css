@@ -1,89 +1,125 @@
+/* Container */
 .admin-foster-container {
-  width: 85%;
-  margin: 50px auto;
-  padding: 30px 40px;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  background: #f4f6fb;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Heading */
+/* Title */
 .admin-foster-container h2 {
   text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-  color: #0077ff;
   margin-bottom: 30px;
+  color: #2c3e50;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-/* Table Styling */
+/* Table */
 .fosters-table {
   width: 100%;
   border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  table-layout: fixed;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Header */
+.fosters-table thead {
+  background: linear-gradient(135deg, #3b5d7a, #4a6c8f);
+  color: white;
+}
+
+.fosters-table th {
+  padding: 16px;
+  font-size: 15px;
+  font-weight: 600;
   text-align: center;
 }
 
-/* Table Header */
-.fosters-table thead th {
-  background: #556b82;
-  color: white;
-  padding: 14px;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-/* Rounded top corners of header */
-.fosters-table thead th:first-child {
-  border-top-left-radius: 10px;
-}
-.fosters-table thead th:last-child {
-  border-top-right-radius: 10px;
-}
-
-/* Table Content Rows */
-.fosters-table tbody tr {
-  border-bottom: 1px solid #e5e5e5;
-  transition: 0.3s;
-}
-
-/* Row Hover Effect */
-.fosters-table tbody tr:hover {
-  background-color: #f4f7ff;
-}
-
-/* Table Cell Style */
+/* Body */
 .fosters-table td {
   padding: 18px 12px;
-  font-size: 15px;
-  color: #333;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+  word-wrap: break-word;
 }
 
-/* Round Profile Image */
+/* Column width control */
+.fosters-table th:nth-child(1),
+.fosters-table td:nth-child(1) {
+  width: 12%;
+}
+
+.fosters-table th:nth-child(2),
+.fosters-table td:nth-child(2) {
+  width: 18%;
+}
+
+.fosters-table th:nth-child(3),
+.fosters-table td:nth-child(3) {
+  width: 22%;
+}
+
+.fosters-table th:nth-child(4),
+.fosters-table td:nth-child(4) {
+  width: 22%;
+}
+
+.fosters-table th:nth-child(5),
+.fosters-table td:nth-child(5) {
+  width: 14%;
+}
+
+.fosters-table th:nth-child(6),
+.fosters-table td:nth-child(6) {
+  width: 12%;
+}
+
+/* Profile Image */
 .foster-img {
   width: 55px;
   height: 55px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #2a63ff;
+  border: 3px solid #e2e8f0;
 }
 
-/* Aadhaar Link Style */
+/* Aadhaar Button */
 .fosters-table a {
-  font-weight: 600;
-  color: #0066ff;
   text-decoration: none;
+  background: #3b5d7a;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  transition: 0.3s;
 }
 
 .fosters-table a:hover {
-  text-decoration: underline;
-  color: #0044cc;
+  background: #2a4357;
 }
 
-/* Responsive Fix */
+/* Row Hover */
+.fosters-table tbody tr:hover {
+  background: #f1f5ff;
+  transition: 0.3s;
+}
+
+/* Responsive */
 @media (max-width: 900px) {
-  .fosters-table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
+  .fosters-table th,
+  .fosters-table td {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .foster-img {
+    width: 40px;
+    height: 40px;
   }
 }

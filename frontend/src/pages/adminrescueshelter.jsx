@@ -24,13 +24,13 @@ function AdminRescueshelter() {
 	}
 
 	return (
-		<div className="admin-rescueshelter-container">
+		<div className="admin-rescueshelters-container">
 			<h2>Registered Rescueshelter</h2>
 
-			<table className="rescueshelter-table">
+			<table className="rescueshelters-table">
 				<thead>
 					<tr>
-						<th>#</th>
+						<th>Profilepic</th>
 						<th>Name</th>
 						<th>Userid</th>
 						<th>Address</th>
@@ -68,7 +68,7 @@ function AdminRescueshelter() {
 							</td>
 							<td>
 								{item.Approved === true ? (
-									<span className="status-badge activated">
+									<span className="rescuestatus-badge activated">
 										✔ Activated
 									</span>
 								) : (
@@ -77,7 +77,7 @@ function AdminRescueshelter() {
 							</td>
 							<td>
 								{item.Approved === false ? (
-									<span className="status-badge deactivated">
+									<span className="rescuestatus-badge deactivated">
 										✖ Deactivated
 									</span>
 								) : (

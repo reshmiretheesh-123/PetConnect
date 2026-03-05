@@ -1,83 +1,111 @@
-/* Page container */
-.lostfound-container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
+/* Page Container */
+.lostfound-container{
+    padding:40px;
+    background:#f4f6fb;
+    min-height:100vh;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Heading */
-.lostfound-container h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 28px;
-    font-weight: 600;
-    color: #2c3e50;
+/* Title */
+.lostfound-container h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#2c3e50;
+    font-weight:600;
 }
 
-/* Table wrapper */
-.lostpets-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #ffffff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+/* Table */
+.lostpets-table{
+    width:100%;
+    border-collapse:collapse;
+    background:#ffffff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    table-layout:fixed;
 }
 
-/* Table header */
-.lostpets-table thead {
-    background: #34495e;
-    color: white;
+/* Header */
+.lostpets-table thead{
+    background:#3b5d7a;
+    color:white;
 }
 
-.lostpets-table th {
-    padding: 14px 16px;
-    text-align: left;
-    font-weight: 600;
-    font-size: 15px;
+.lostpets-table th{
+    padding:16px;
+    font-size:15px;
+    font-weight:600;
+    text-align:center;
 }
 
-/* Table rows */
-.lostpets-table td {
-    padding: 14px 16px;
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 14px;
-    color: #2c3e50;
+/* Table Body */
+.lostpets-table td{
+    padding:18px 12px;
+    text-align:center;
+    border-bottom:1px solid #eee;
+    font-size:14px;
+    color:#555;
+    word-wrap:break-word;
 }
 
-/* Row hover */
-.lostpets-table tbody tr {
-    transition: all 0.2s ease;
+/* Column Widths */
+.lostpets-table th:nth-child(1),
+.lostpets-table td:nth-child(1){
+    width:15%;
 }
 
-.lostpets-table tbody tr:hover {
-    background-color: #f7f9fb;
+.lostpets-table th:nth-child(2),
+.lostpets-table td:nth-child(2){
+    width:15%;
 }
 
-/* Small profile image (first column) */
-.lostpets-img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #e0e0e0;
+.lostpets-table th:nth-child(3),
+.lostpets-table td:nth-child(3){
+    width:15%;
 }
 
-/* Pet picture column */
-.lostpet-image {
-    width: 80px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+.lostpets-table th:nth-child(4),
+.lostpets-table td:nth-child(4){
+    width:20%;
 }
 
-/* Responsive table */
-@media (max-width: 768px) {
-    .lostpets-table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
+.lostpets-table th:nth-child(5),
+.lostpets-table td:nth-child(5){
+    width:20%;
+}
+
+.lostpets-table th:nth-child(6),
+.lostpets-table td:nth-child(6){
+    width:15%;
+}
+
+/* Pet Image */
+.lostpets-img{
+    width:60px;
+    height:60px;
+    border-radius:10px;
+    object-fit:cover;
+    border:3px solid #e6ecff;
+}
+
+/* Row Hover */
+.lostpets-table tbody tr:hover{
+    background:#f2f7ff;
+    transition:0.3s;
+}
+
+/* Responsive */
+@media screen and (max-width:768px){
+
+.lostpets-table th,
+.lostpets-table td{
+    padding:12px 8px;
+    font-size:13px;
+}
+
+.lostpets-img{
+    width:45px;
+    height:45px;
+}
+
 }

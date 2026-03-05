@@ -19,7 +19,7 @@ const [details, setDetails] = useState([])
       <table className="fosters-table">
         <thead>
           <tr>
-            <th>#</th>
+            <th>Profilepic</th>
             <th>Fostername</th>
             <th>Emailid</th>
             <th>Address</th>

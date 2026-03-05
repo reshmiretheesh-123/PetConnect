@@ -1,127 +1,158 @@
-.admin-rescueshelter-container {
-  width: 85%;
-  margin: 50px auto;
-  padding: 30px 40px;
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.08);
+/* Page Container */
+.admin-rescueshelters-container{
+    padding:40px;
+    background:#f4f6fb;
+    min-height:100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Heading */
-.admin-rescueshelter-container h2 {
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-  color: #0077ff;
-  margin-bottom: 30px;
+/* Title */
+.admin-rescueshelters-container h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#2c3e50;
+    font-weight:600;
 }
 
-/* Table Styling */
-.rescueshelter-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
+/* Table */
+.rescueshelters-table{
+    width:100%;
+    border-collapse:collapse;
+    background:#ffffff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    table-layout:fixed;
 }
 
-/* Table Header */
-.rescueshelter-table thead th {
-  background: #556b82;
-  color: white;
-  padding: 14px;
-  font-size: 16px;
-  font-weight: 600;
+/* Header */
+.rescueshelters-table thead{
+    background:#3b5d7a;
+    color:white;
 }
 
-/* Rounded header corners */
-.rescueshelter-table thead th:first-child {
-  border-top-left-radius: 12px;
-}
-.rescueshelter-table thead th:last-child {
-  border-top-right-radius: 12px;
-}
-
-/* Table Rows */
-.rescueshelter-table tbody tr {
-  border-bottom: 1px solid #dcdcdc;
-  transition: 0.3s ease;
+.rescueshelters-table th{
+    padding:16px;
+    font-size:15px;
+    font-weight:600;
+    text-align:center;
 }
 
-/* Hover Effect */
-.rescueshelter-table tbody tr:hover {
-  background-color: #f4f7ff;
+/* Table body */
+.rescueshelters-table td{
+    padding:18px 12px;
+    text-align:center;
+    border-bottom:1px solid #eee;
+    font-size:14px;
+    color:#555;
+    word-wrap:break-word;
 }
 
-/* Table Cell Style */
-.rescueshelter-table td {
-  padding: 16px 10px;
-  font-size: 15px;
-  color: #333;
+/* Column widths */
+.rescueshelters-table th:nth-child(1),
+.rescueshelters-table td:nth-child(1){
+    width:10%;
 }
 
-/* Round Profile Images */
-.rescueshelter-img {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #1e63ff;
+.rescueshelters-table th:nth-child(2),
+.rescueshelters-table td:nth-child(2){
+    width:15%;
 }
 
-/* Aadhaar Link Style */
-.rescueshelter-table a {
-  color: #0066ff;
-  font-weight: 600;
-  text-decoration: none;
+.rescueshelters-table th:nth-child(3),
+.rescueshelters-table td:nth-child(3){
+    width:18%;
 }
 
-.rescueshelter-table a:hover {
-  color: #003db5;
-  text-decoration: underline;
+.rescueshelters-table th:nth-child(4),
+.rescueshelters-table td:nth-child(4){
+    width:20%;
+}
+
+.rescueshelters-table th:nth-child(5),
+.rescueshelters-table td:nth-child(5){
+    width:15%;
+}
+
+.rescueshelters-table th:nth-child(6),
+.rescueshelters-table td:nth-child(6){
+    width:10%;
+}
+
+.rescueshelters-table th:nth-child(7),
+.rescueshelters-table td:nth-child(7){
+    width:6%;
+}
+
+.rescueshelters-table th:nth-child(8),
+.rescueshelters-table td:nth-child(8){
+    width:6%;
+}
+
+/* Profile Image */
+.rescueshelter-img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #e6ecff;
+}
+
+/* Aadhaar link */
+.rescueshelters-table a{
+    text-decoration:none;
+    background:#355674;
+    color:white;
+    padding:6px 14px;
+    border-radius:6px;
+    font-size:13px;
+    transition:0.3s;
+}
+
+.rescueshelters-table a:hover{
+    background:#233b50;
 }
 
 /* Buttons */
-.rescueshelter-table button {
-  background: #0099ff;
-  border: none;
-  color: white;
-  padding: 6px 12px;
-  font-size: 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
+.rescueshelters-table button{
+    border:none;
+    padding:6px 14px;
+    border-radius:6px;
+    font-size:13px;
+    cursor:pointer;
+    color:white;
 }
 
-.rescueshelter-table button:hover {
-  background: #0074d9;
-  transform: scale(1.05);
+/* Approve button */
+.rescueshelters-table td:nth-child(7) button{
+    background:#4CAF50;
 }
 
-/* Status Badges */
-.rescueshelter-status-badge {
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 14px;
-  display: inline-block;
+/* Reject button */
+.rescueshelters-table td:nth-child(8) button{
+    background:#e74c3c;
 }
 
-.activated {
-  background-color: #d4ffe0;
-  color: #0a7426;
-  border: 1px solid #41c765;
+/* Hover effect */
+.rescueshelters-table tbody tr:hover{
+    background:#f2f7ff;
+    transition:0.3s;
 }
 
-.deactivated {
-  background-color: #ffe3e3;
-  color: #b50000;
-  border: 1px solid #ff5959;
+/* Status badges */
+.rescuestatus-badge{
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:500;
 }
 
-/* Responsive Design */
-@media (max-width: 900px) {
-  .rescueshelter-table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
+.activated{
+    background:#e6f9ec;
+    color:#2e7d32;
+}
+
+.deactivated{
+    background:#fdecea;
+    color:#c62828;
 }

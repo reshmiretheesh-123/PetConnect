@@ -44,7 +44,7 @@ function AdminHomePage() {
         <h2 className="logo">🐾 Pet Connect</h2>
 
         <ul className="menu">
-          <li><Link to="/admin/home">Dashboard</Link></li>
+          {/* <li><Link to="/admin/home">Dashboard</Link></li> */}
           <li><Link to="/adminpetowner">Pet Owners</Link></li>
           <li><Link to="/adminadopter">Adopters</Link></li>
           <li><Link to="/adminfoster">Fosters</Link></li>
