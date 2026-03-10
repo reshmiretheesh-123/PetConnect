@@ -48,7 +48,7 @@ function AdminHomePage() {
           <li><Link to="/adminpetowner">Pet Owners</Link></li>
           <li><Link to="/adminadopter">Adopters</Link></li>
           <li><Link to="/adminfoster">Fosters</Link></li>
-          <li><Link to="/adminrescueshelter">Rescue Shelters</Link></li>
+          {/* <li><Link to="/adminrescueshelter">Rescue Shelters</Link></li> */}
           {/* <li><Link to="/admin/petmanagement">Pet Management</Link></li> */}
           {/* <li><Link to="/admin/contact">Contact Submissions</Link></li> */}
           <li><Link to="/lostfoundpets">Lost & Found Pets</Link></li>
