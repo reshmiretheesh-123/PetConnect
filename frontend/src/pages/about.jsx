@@ -58,7 +58,7 @@ function About() {
       <div className="about-section">
         <div className="about-image">
           <img
-            src="https://weton.biz.id/wp-content/uploads/2025/08/Contact-Us.webp"
+            src="https://imgs.search.brave.com/fKHri_kl9UIBox0xGMg3HBclc4NGijIzAEUKkLfcQFs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI1/NzU2NzI0OS9waG90/by9ncm9vbWluZy1z/YWxvbi5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9a1Z0STZY/NnZHaldCM0VRbGVU/Z1VseG5wblVVQ0Vq/cWp5azhTZ2x3cDVk/ND0"
             alt="Our vision"
           />
         </div>

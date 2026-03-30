@@ -1,83 +1,76 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../styles/adminhomepage.css";
-import { Link } from "react-router-dom";
-import instance from "../utils/apiClient";
+import { Link, useNavigate } from "react-router-dom";
+import { FaUserFriends, FaDog, FaHandsHelping, FaFileAlt, FaSignOutAlt } from "react-icons/fa";
 
 function AdminHomePage() {
-  function Logout(){
-    const confirmLogout = window.confirm("Are you sure want to logout");
-    if(confirmLogout){
+  const navigate = useNavigate();
+
+  function AdminLogout() {
+    const confirmLogout = window.confirm("Are you sure you want to logout?");
+    if (confirmLogout) {
       localStorage.clear();
-      window.location.href ="/";
+      navigate("/");
     }
   }
-  const [counts, setCounts] = useState({
-    totalUsers: 0,
-    totalPets: 0,
-    totalAdopters: 0,
-    totalApplications: 0,
-    totalDocuments: 0,
-    totalFosters: 0,
-    totalLostFound: 0,
-    totalPetOwners: 0,
-    totalRescueShelters: 0,
-  });
 
-  // Fetch counts from backend
-  useEffect(() => {
-    const fetchCounts = async () => {
-      try {
-        const response = await instance.get("/admin/getCounts");
-        setCounts(response.data);
-      } catch (err) {
-        console.error("Error fetching counts", err);
-      }
-    };
-    fetchCounts();
-  }, []);
+  const menuCards = [
+    {
+      title: "Pet Owners",
+      icon: <FaUserFriends />,
+      path: "/adminpetowner",
+    },
+    {
+      title: "Adopters",
+      icon: <FaDog />,
+      path: "/adminadopter",
+    },
+    {
+      title: "Fosters",
+      icon: <FaHandsHelping />,
+      path: "/adminfoster",
+    },
+    {
+      title: "Lost & Found Pets",
+      icon: <FaDog />,
+      path: "/lostfoundpets",
+    },
+    {
+      title: "Adoption Applications",
+      icon: <FaFileAlt />,
+      path: "/applicationrequest",
+    },
+  ];
 
   return (
-    <div className="admin-container">
-
-      {/* Sidebar */}
-      <div className="sidebar">
-        <h2 className="logo">🐾 Pet Connect</h2>
-
-        <ul className="menu">
-          {/* <li><Link to="/admin/home">Dashboard</Link></li> */}
-          <li><Link to="/adminpetowner">Pet Owners</Link></li>
-          <li><Link to="/adminadopter">Adopters</Link></li>
-          <li><Link to="/adminfoster">Fosters</Link></li>
-          {/* <li><Link to="/adminrescueshelter">Rescue Shelters</Link></li> */}
-          {/* <li><Link to="/admin/petmanagement">Pet Management</Link></li> */}
-          {/* <li><Link to="/admin/contact">Contact Submissions</Link></li> */}
-          <li><Link to="/lostfoundpets">Lost & Found Pets</Link></li>
-          <li><Link to="/applicationrequest">Adoption Applications</Link></li>
-        </ul>
+    <div className="admin-home">
+      {/* Top Bar */}
+      <div className="topbar">
+        <h2>🐾 Admin Dashboard</h2>
+        <button onClick={AdminLogout} className="adminlogout-btn">
+          <FaSignOutAlt /> Logout
+        </button>
       </div>
 
-      {/* Main Content */}
-      <div className="main">
-        <div className="topbar">
-          <h3>Dashboard</h3>
-          <button onClick={Logout} className="adminlogout-btn"><Link>Logout</Link></button>
-        </div>
+      {/* Welcome Section */}
+      <div className="welcome-section">
+        <h1>Welcome Admin 👋</h1>
+        <p>Manage your platform efficiently with the options below.</p>
+      </div>
 
-        {/* Dashboard Cards */}
-        <div className="cards">
-          <div className="card"> <h4>Total Users</h4> <p>{counts.totalUsers}</p> </div>
-          <div className="card"> <h4>Total Pets</h4> <p>{counts.totalPets}</p> </div>
-          <div className="card"> <h4>Total Adopters</h4> <p>{counts.totalAdopters}</p> </div>
-          <div className="card"> <h4>Total Applications</h4> <p>{counts.totalApplications}</p> </div>
-          <div className="card"> <h4>Total Documents</h4> <p>{counts.totalDocuments}</p> </div>
-          <div className="card"> <h4>Total Fosters</h4> <p>{counts.totalFosters}</p> </div>
-          <div className="card"> <h4>Total Lost/Found Pets</h4> <p>{counts.totalLostFound}</p> </div>
-          <div className="card"> <h4>Total Pet Owners</h4> <p>{counts.totalPetOwners}</p> </div>
-          <div className="card"> <h4>Total Rescue Shelters</h4> <p>{counts.totalRescueShelters}</p> </div>
-        </div>
+      {/* Menu Cards */}
+      <div className="menu-grid">
+        {menuCards.map((item, index) => (
+          <Link to={item.path} key={index} className="menu-card">
+            <div className="icon">{item.icon}</div>
+            <h3>{item.title}</h3>
+          </Link>
+        ))}
       </div>
     </div>
   );
 }
 
 export default AdminHomePage;
+
+
