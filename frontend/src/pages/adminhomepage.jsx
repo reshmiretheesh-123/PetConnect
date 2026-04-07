@@ -44,7 +44,7 @@ function AdminHomePage() {
 
   return (
     <div className="admin-home">
-      {/* Top Bar */}
+     
       <div className="topbar">
         <h2>🐾 Admin Dashboard</h2>
         <button onClick={AdminLogout} className="adminlogout-btn">
@@ -52,7 +52,6 @@ function AdminHomePage() {
         </button>
       </div>
 
-      {/* Welcome Section */}
       <div className="welcome-section">
         <h1>Welcome Admin 👋</h1>
         <p>Manage your platform efficiently with the options below.</p>
